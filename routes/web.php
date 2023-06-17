@@ -39,5 +39,10 @@ Route::get('/', [ListingController::class, 'index']);
 // Show Create Form
 Route::get('/listings/create', [ListingController::class, 'create']);
 
-// Single Listing
+// Store Listing Data
+Route::post('/listings/', [ListingController::class, 'store']);
+
+
+
+// Single Listing (MUST BE AT THE LAST OF /LISTINGS)
 Route::get('/listings/{listing}', [ListingController::class, 'show']); 
